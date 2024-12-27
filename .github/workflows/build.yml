@@ -31,8 +31,5 @@ jobs:
         with:
           name: metalanglekit
           path: |
-            build/MetalANGLEKit.xcframework/
-            Frameworks/libEGL.xcframework/
-            Frameworks/libGLESv2.xcframework/
-            Frameworks/libfeature_support.xcframework/
+            build/
             
