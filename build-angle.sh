@@ -74,6 +74,9 @@ for FRAMEWORK in $FRAMEWORKS; do
     
     copy_frameworks $FRAMEWORK
 
+    /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string 1.0" "$TEMP_DIR/device/$FRAMEWORK.framework/Info.plist"
+    /usr/libexec/PlistBuddy -c "Add :CFBundleShortVersionString string 1.0" "$TEMP_DIR/simulator/$FRAMEWORK.framework/Info.plist"
+
     xcodebuild -create-xcframework -framework $TEMP_DIR/device/$FRAMEWORK.framework -debug-symbols $TEMP_DIR/device/$FRAMEWORK.dSYM \
         -framework $TEMP_DIR/simulator/$FRAMEWORK.framework -debug-symbols $TEMP_DIR/simulator/$FRAMEWORK.dSYM \
         -output Frameworks/$FRAMEWORK.xcframework
