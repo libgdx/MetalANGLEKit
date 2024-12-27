@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F06E06202D1EE21C001E4654 /* libEGL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098B64B2C6CFAB3005B999A /* libEGL.xcframework */; };
 		F092D3AE2C74BC060076C252 /* libfeature_support.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F092D3AD2C74BC060076C252 /* libfeature_support.xcframework */; };
-		F092D3AF2C74BC060076C252 /* libfeature_support.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F092D3AD2C74BC060076C252 /* libfeature_support.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F092D3B12C74BC900076C252 /* feature_support_util.h in Headers */ = {isa = PBXBuildFile; fileRef = F092D3B02C74BC900076C252 /* feature_support_util.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F092D3B32C74BD190076C252 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = F092D3B22C74BD190076C252 /* export.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F098B6042C6B7160005B999A /* MetalANGLEKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F098B6032C6B7160005B999A /* MetalANGLEKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,31 +33,12 @@
 		F098B6372C6BF99C005B999A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098B6362C6BF99B005B999A /* CoreGraphics.framework */; };
 		F098B6392C6BFB42005B999A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098B6382C6BFB42005B999A /* AppKit.framework */; platformFilters = (macos, ); };
 		F098B6462C6CF2D1005B999A /* libGLESv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098B6442C6CF2D1005B999A /* libGLESv2.xcframework */; };
-		F098B6472C6CF2D1005B999A /* libGLESv2.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F098B6442C6CF2D1005B999A /* libGLESv2.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F098B64C2C6CFAB3005B999A /* libEGL.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F098B64B2C6CFAB3005B999A /* libEGL.xcframework */; };
-		F098B64D2C6CFAB3005B999A /* libEGL.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F098B64B2C6CFAB3005B999A /* libEGL.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F098B7092C6EA417005B999A /* GLES2 in Headers */ = {isa = PBXBuildFile; fileRef = F098B7022C6EA417005B999A /* GLES2 */; settings = {ATTRIBUTES = (Public, ); }; };
 		F098B70A2C6EA417005B999A /* GLES in Headers */ = {isa = PBXBuildFile; fileRef = F098B7032C6EA417005B999A /* GLES */; settings = {ATTRIBUTES = (Public, ); }; };
 		F098B70B2C6EA417005B999A /* EGL in Headers */ = {isa = PBXBuildFile; fileRef = F098B7042C6EA417005B999A /* EGL */; settings = {ATTRIBUTES = (Public, ); }; };
 		F098B70D2C6EA417005B999A /* GLES3 in Headers */ = {isa = PBXBuildFile; fileRef = F098B7062C6EA417005B999A /* GLES3 */; settings = {ATTRIBUTES = (Public, ); }; };
 		F098B70E2C6EA417005B999A /* KHR in Headers */ = {isa = PBXBuildFile; fileRef = F098B7072C6EA417005B999A /* KHR */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F098B64A2C6CF2D1005B999A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F092D3AF2C74BC060076C252 /* libfeature_support.xcframework in Embed Frameworks */,
-				F098B64D2C6CFAB3005B999A /* libEGL.xcframework in Embed Frameworks */,
-				F098B6472C6CF2D1005B999A /* libGLESv2.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F092D3AD2C74BC060076C252 /* libfeature_support.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libfeature_support.xcframework; path = Frameworks/libfeature_support.xcframework; sourceTree = "<group>"; };
@@ -101,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F098B64C2C6CFAB3005B999A /* libEGL.xcframework in Frameworks */,
+				F06E06202D1EE21C001E4654 /* libEGL.xcframework in Frameworks */,
 				F098B6462C6CF2D1005B999A /* libGLESv2.xcframework in Frameworks */,
 				F098B6372C6BF99C005B999A /* CoreGraphics.framework in Frameworks */,
 				F098B6332C6BF952005B999A /* QuartzCore.framework in Frameworks */,
@@ -227,7 +208,6 @@
 				F098B5FC2C6B7160005B999A /* Sources */,
 				F098B5FD2C6B7160005B999A /* Frameworks */,
 				F098B5FE2C6B7160005B999A /* Resources */,
-				F098B64A2C6CF2D1005B999A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
