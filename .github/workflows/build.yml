@@ -16,6 +16,8 @@ jobs:
         with:
           fetch-depth: 0
           submodules: 'true'
+      - name: Check
+        run: find /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/metal/
       - name: Setup repository
         run: |
           brew install ninja
