@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 apply_git_patch() {
     local patch_file=$1
 

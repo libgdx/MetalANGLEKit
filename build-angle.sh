@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 copy_frameworks() {
     local framework=$1
     SDKS="device simulator"

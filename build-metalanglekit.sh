@@ -1,4 +1,7 @@
 #!/bin/sh
+
+set -e
+
 rm -r build
 rm -r tmp
 mkdir build
