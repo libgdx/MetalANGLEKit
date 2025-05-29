@@ -12,3 +12,24 @@ index d3a8a1d6e..6d3ebd624 100644
  
  metal_internal_shaders_header =
      "$root_gen_dir/angle/mtl_internal_shaders_metallib.h"
+diff --git a/src/libANGLE/renderer/metal/BUILD.gn b/src/libANGLE/renderer/metal/BUILD.gn
+index 96e9ee842..60ce22d8a 100644
+--- a/src/libANGLE/renderer/metal/BUILD.gn
++++ b/src/libANGLE/renderer/metal/BUILD.gn
+@@ -50,10 +50,12 @@ if (metal_internal_shader_compilation_supported) {
+         "-mmacosx-version-min=10.14",
+       ]
+     } else if (is_ios) {
+-      args += [
+-        "--std=ios-metal2.1",
+-        "-mios-version-min=12",
+-      ]
++      args += ["--std=ios-metal2.1"]
++      if (target_environment == "simulator") {
++        args += ["-mios-simulator-version-min=12"]
++      } else {
++        args += ["-mios-version-min=12"]
++      }
+     }
+   }
+ 
