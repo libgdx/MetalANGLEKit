@@ -2,8 +2,8 @@
 
 set -e
 
-rm -r build
-rm -r tmp
+rm -rf build
+rm -rf tmp
 mkdir build
 mkdir tmp
 

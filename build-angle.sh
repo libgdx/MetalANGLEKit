@@ -44,7 +44,7 @@ cd "$(dirname "$0")"
 
 export PATH="$(pwd)/depot_tools:$PATH"
 
-rm -r Frameworks/
+rm -rf Frameworks/
 mkdir Frameworks/
 
 autoninja -C angle/out/$BUILD_TYPE-iphoneos
