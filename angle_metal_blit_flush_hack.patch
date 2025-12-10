@@ -1,0 +1,20 @@
+diff --git a/src/libANGLE/renderer/metal/ContextMtl.mm b/src/libANGLE/renderer/metal/ContextMtl.mm
+index 5e4498692a..a9de6d2076 100644
+--- a/src/libANGLE/renderer/metal/ContextMtl.mm
++++ b/src/libANGLE/renderer/metal/ContextMtl.mm
+@@ -2008,6 +2008,7 @@ GLint GetOwnershipIdentity(const egl::AttributeMap &attribs)
+ 
+ mtl::BlitCommandEncoder *ContextMtl::getBlitCommandEncoder()
+ {
++    flushCommandBufferIfNeeded();
+     if (mRenderEncoder.valid() || mComputeEncoder.valid())
+     {
+         endEncoding(true);
+@@ -2026,6 +2027,7 @@ GLint GetOwnershipIdentity(const egl::AttributeMap &attribs)
+ 
+ mtl::BlitCommandEncoder *ContextMtl::getBlitCommandEncoderWithoutEndingRenderEncoder()
+ {
++    flushCommandBufferIfNeeded();
+     if (mBlitEncoder.valid())
+     {
+         return &mBlitEncoder;
